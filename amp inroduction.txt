@@ -1,0 +1,55 @@
+							/* ----- AMP Points to remember ----- */
+							
+==>For AMP Page structure see the demo page...
+
+0).For all insruction :-
+	(https://github.com/ampproject/amphtml/tree/master/spec)
+	(https://github.com/ampproject/amphtml/blob/master/spec/amp-html-format.md)
+	(https://github.com/ampproject/amphtml/blob/master/spec/amp-html-layout.md)
+
+1).	For amp-img position /*absolute*/ and /*float*/ don't work with layout="responsvie"
+
+2).	In AMP if we want to apply style to image than those style /*must be*/ apply to the direct /*amp-img*/, 	if we apply these style to it's parent than it can't apply.
+
+3). 	In AMP /*amp-custome style*/ size is must be less 50kb.
+
+4)	Tags that /*replace*/ HTML to AMP:-
+		img => amp-img
+		video => amp-video
+		audio => amp-audio
+		iframe => amp-iframe
+
+5).	Tags and Keywords that not allowed in AMP:- (https://github.com/ampproject/amphtml/blob/master/spec/amp-tag-addendum.md)
+		<input[type = password]>, 
+		<input[type = button]>,
+		<input[type = image]>, 
+		<input[type = file]>,
+		svg(some of not allowed),
+		!important,
+		picture,
+		@import,
+		object,
+		embed,
+		base,
+		<!--[if Chrome]>
+		   ( Condiional Comment like this not allowed)
+		<![endif]-->;
+
+6).	Rules For AMP style :-
+		-->classes and id name must /*not start*/ with /*-amp- or i-amp-*/
+		-->fonts only allow for cdn ( see amp_demo)
+		-->You may not alter the margin property on the body element.
+		-->You may not load an external stylesheet or import one via @import
+		-->You may not add style attributes to elements.
+		-->You may not use the !important qualifier.
+		-->Attribute names starting with /*on*/ (such as onclick or onmouseover) are not allowed
+		-->You may never use any of the following properties:
+			behavior:
+			overflow: scroll
+			overflow: auto
+			transition:
+			filter
+			animation
+			-moz-binding
+
+

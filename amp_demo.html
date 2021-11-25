@@ -1,0 +1,231 @@
+<!doctype html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Google AMP - Form</title>
+    <link rel="canonical" href="amp_demo.html">
+    <meta name="viewport" content="width=device-width,minimum-scale = 1,initial-scale = 1">
+    <style amp-boilerplate>
+        body{
+         -webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+         -moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+         -ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;
+         animation:-amp-start 8s steps(1,end) 0s 1 normal both
+      }
+      @-webkit-keyframes -amp-start{
+         from{visibility:hidden}
+         to{visibility:visible}
+      }
+      @-moz-keyframes -amp-start{
+         from{visibility:hidden}
+         to{visibility:visible}
+      }
+      @-ms-keyframes -amp-start{
+         from{visibility:hidden}
+         to{visibility:visible}
+      }
+      @-o-keyframes -amp-start{
+         from{visibility:hidden}
+         to{visibility:visible}
+      }
+      @keyframes -amp-start{
+         from{visibility:hidden}
+         to{visibility:visible}
+      }
+   </style>
+    <noscript>
+        <style amp-boilerplate>
+            body{
+               -webkit-animation:none;
+               -moz-animation:none;
+               -ms-animation:none;
+                animation:none
+             }
+         </style>
+    </noscript>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js">
+    </script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js">
+    </script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <style amp-custom>
+        .form-control{
+          height: 25px;
+          font-size: 16px; 
+          line-height: 20px;
+          border-radius: 4px;
+          background-color: transparent;
+          border: 1px solid #ccc;
+          transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+          display: inline-block;
+          padding: 1px 5px;
+          margin-bottom: 20px;
+         }
+         section{
+            padding: 20px 0;
+         }
+         h1{
+            color: green;
+            font-family: 'Calligraffitti', cursive;
+            position: relative;
+            padding-bottom: 10px;
+         }
+           h1:after {
+            content: '';
+            position: absolute;
+            background-color: blue;
+            opacity: 0.5;
+            margin: 0 auto;
+            height: 4px;
+            width: 86px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+         /* font-face */
+         @font-face{
+            src: url("https://fonts.googleapis.com/css?family=Calligraffitti&display=swap");
+            font-family: 'Calligraffitti', cursive;
+         }
+         /* form_demo */
+         .form_example{
+            text-align: center;
+         }
+         form.amp-form-submit-success [submit-success],
+         form.amp-form-submit-error [submit-error]{
+            margin-top: 16px;
+         }
+         form.amp-form-submit-success [submit-success] {
+            color: white;
+            background-color:gray;
+         }
+         form.amp-form-submit-error [submit-error] {
+            color: red;
+         }
+         form.amp-form-submit-success.hide-inputs > 
+            input {
+            display: none;
+         }
+         .main-menu li a{
+            font-size: 18px;
+            line-height: 1.22;
+            color: #fff;padding: 15px;text-transform: uppercase;text-decoration: none;display: inline-block;
+         }
+         .main-menu>li.has-sub-menu .sub-menu-arrow.back-arrow{
+            left: auto;
+            right: 0;
+         }
+         .main-menu>li.has-sub-menu .sub-menu-arrow{
+            position: absolute;
+            right: 0;
+            height: 25px;
+            width: 25px;
+            background-color: rebeccapurple;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+         }
+         .main-menu>li{
+            position: relative;
+         }
+         #sidebar1{
+            width: 300px;
+            background: #0b2e58;
+         }
+         .btn{
+            background-color: #fa8503;
+            width: 8.5rem;
+            padding: 1rem;
+            min-width: inherit;
+            max-width: inherit;
+            line-height: 20px;
+         }
+         .contact-wrapper{
+            margin-left: 15px;
+         }
+         :focus{
+            outline: none;
+            border:none;
+         }
+      </style>
+</head>
+
+<body>
+    <button on="tap:sidebar1">Open Sidebar</button>
+    <amp-sidebar id="sidebar1" layout="nodisplay">
+      <amp-nested-menu layout="fill">
+        <ul class="main-menu">
+            <li class="has-sub-menu">
+                <a href="#" title="Services">Services</a>
+                <div amp-nested-submenu-open class="sub-menu-arrow"></div>
+                <div amp-nested-submenu>
+                  <ul>
+                    <li>
+                      <div amp-nested-submenu-close class="sub-menu-arrow back-arrow">Go back</div>
+                    </li>
+                    <li>
+                      
+                    </li>
+                  </ul>
+                </div>
+            </li>
+            <li><a href="#">Technologies</a></li>
+            <li class="has-sub-menu">
+                <a href="#" title="Services">industries</a>
+                <div amp-nested-submenu-open class="sub-menu-arrow"></div>
+                <div amp-nested-submenu>
+                  <ul>
+                    <li>
+                      <h4 amp-nested-submenu-close>Go back</h4>
+                    </li>
+                    <li>
+                      
+                    </li>
+                  </ul>
+                </div>
+            </li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Insights</a></li>
+            <li><a href="#">about</a></li>
+            <li class="contact-wrapper">
+                <a href="#" class="btn" title="Contact">contact</a>
+            </li>
+        </ul>
+      </amp-nested-menu>
+    </amp-sidebar>
+
+<div id="target-element"></div>
+    <section class="form_example">
+        <h1>Google AMP - Form</h1>
+        <form method="GET" class="p2" action="submitform.php" target="_top">
+            <p>AMP - Form Example</p>
+            <div>
+                <input class="form-control" type="text" name="name" placeholder="Enter Name" required>
+                <input class="form-control" type="email" name="email" placeholder="Enter Email" required>
+                <div>
+                    <input type="submit" value="Submit">
+                    <div submit-success>
+                        <template type="amp-mustache">
+                            Form Submitted! Thanks {{name}}.
+                        </template>
+                    </div>
+                    <div submit-error>
+                        <template type="amp-mustache">
+                            Error! {{name}}, please try again.
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="img_demo">
+        <h1>Google AMP - Image Example</h1>
+        <amp-img class='img_amp' alt="Beautiful Flower" src="images/page-list2.jpg" layout="responsive" width="246" height="205">
+        </amp-img>
+    </section>
+</body>
+
+</html>
